@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: 2rem;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+table {
+  margin-top: 1rem;
+}
+
+table {
+  border: 1px solid;
+  padding: 1px;
+  background: burlywood;
+}
+
+tr,
+td,
+th {
+  border: 1px solid;
+  padding: 5px;
+}
+
+.title {
+  color: blue;
+}
+
+.content {
+  color: green;
+}
+
+.item1 {
+    border-top: 1rem solid red;
+}
+
+.item4{
+    border-bottom: 1rem solid green;
+}
+
