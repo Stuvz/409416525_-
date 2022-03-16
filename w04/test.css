@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  background: blue;
+  border: 1px solid red;
+  text-align: right;
+}
+
+h2 {
+  padding: 32px;
+
+  margin: 2rem;
+  color: gold;
+}
+
+h3:hover {
+  color: green;
+}
+
+
+
+
+
+
+
+.list1 {
+  background: #ffe5e5;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.list1 li {
+  background-color: #cce5ff;
+  margin:3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list2 {
+  background: #f1f1f1;
+  margin: 2rem;
+  padding: 2rem;
+  border-left: 100px solid orange;
+}
+
+
+
+.list2 li {
+  list-style-type: none;
+}
