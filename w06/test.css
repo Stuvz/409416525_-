@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner{
+    background-color:slategray;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(115deg, #7bf 10%,transparent 50%) center center / 100% 100%,
+    url("https://picsum.photos/1200/600?random=1") right center / auto 100%;
+}
+
+.container{
+    height: 100%;
+}
+
+.banner-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-text h1{
+    font-size: 6rem;
+    border-bottom: 1px solid #333
+}
+.banner-text h2{
+    font-size: 4rem;
+}
+.banner-text p{
+    font-size: 2rem;
+}
