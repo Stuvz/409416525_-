@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    margin: 100px 0;
+}
+
+.container{
+    position: relative;
+    width: 1500px;
+    margin: auto;
+}
+
+.container h1{
+    width: 500px;
+    font-size: 8rem;
+    position: relative;
+    float: right;
+    box-sizing: border-box;
+    padding: 20px;
+    color: rgb(128, 124, 124);
+}
+
+.container h1::before{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 200px;
+    width: 200px;
+    border: 3rem solid #eee;
+    bottom: 0;
+}
+
+.container .text{
+    column-count: 2;
+    column-gap: 3rem;
+}
+
+.container p{
+    line-height: 2;
+    margin-bottom: 1em;
+}

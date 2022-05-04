@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    margin: 100px 0;
+}
+
+.container{
+    display: flex;
+    width: 1500px;
+    margin: auto;
+    box-shadow: 0 0 3rem #ccc;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.container h1{
+    width: 100%;
+    font-size: 10rem;
+    float: right;
+    box-sizing: border-box;
+    padding-left: 20px;
+    color: rgb(218, 213, 213);
+    position: absolute;
+    top: -2.9rem;    
+}
+
+.container .text{
+    width: 750px;
+    box-sizing: border-box;
+    column-count: 2;
+    column-gap: 3rem;
+    position: relative;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.container p{
+    line-height: 2;
+    margin-bottom: 1em;
+}
+
+.container p:first-child::first-letter{
+    font-size: 5rem;
+    float: left;
+    padding-right: 1rem;
+}

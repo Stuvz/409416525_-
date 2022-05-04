@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1500px;
+    margin: auto;
+    display: flex;
+    padding: 8rem 0;
+}
+
+.container h1{
+    width: 500px;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgb(233, 202, 161);
+}
+
+.container h1::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 4em;
+    background-color: rgb(105, 80, 62);
+    margin-right: auto;
+}
+
+.container .text{
+    width: 1000px;
+    box-sizing: border-box;
+    padding: 2rem;
+    column-count: 2;
+    column-gap: 3rem;
+}
