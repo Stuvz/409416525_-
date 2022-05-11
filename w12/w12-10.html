@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w12-10</title>
+    <script>
+        function addBook() {
+            console.log("開始執行 addBook()...");
+
+            var list = document.getElementById("list");
+            console.log("目前的清單內容:  " + list.innerHTML);
+
+            var book = document.getElementById("book");
+            console.log("輸入的內容: " + book.value);
+
+            list.innerHTML += "<li>" + book.value + "</li>";
+            console.log("addBook() 執行結束...");
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        書名:<input id="book" type="text">
+        <button onclick="addBook()">新增</button>
+    </p>
+    <ul id="list"></ul>
+</body>
+
+</html>
