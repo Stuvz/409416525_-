@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-3</title>
+    <script>
+        function calculateBMI(){
+            var inputH = document.getElementById("height");
+            var height = parseFloat(inputH.value);
+
+            var inputW = document.getElementById("weight");
+            var weight = parseFloat(inputW.value);
+
+            if(isNaN(height) || isNaN(weight)) return;
+            if(height <= 0 || weight <= 0) return;
+
+            height /= 100;
+
+            document.getElementById("bmi").innerHTML = weight / (height * height);
+        }
+    </script>
+</head>
+<body>
+    <p>身高(cm): <input type="number" id="height"></p>
+    <p>體重(kg): <input type="number" id="weight"></p>
+    <p><button onclick="calculateBMI()">計算BMI</button>
+    BMI指數 = <span id="bmi">0</span></p>
+</body>
+</html>

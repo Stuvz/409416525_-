@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-4</title>
+    <style>
+        div {
+            clear: left;
+        }
+        .selected{background: orange;}
+        .small {
+            width: 100px;
+            float: left;
+            margin: 2px;
+            padding: 2px;
+            border: 1px solid black;
+        }
+
+        #big {
+            width: 700px;
+        }
+    </style>
+    <script>
+        setInterval(play, 3000);
+        var index = 0;
+
+        function play() {
+            var imgs = document.getElementById("thumbs").getElementsByTagName("img");
+            var bigImg = document.getElementById("big");
+
+            imgs[index].classList.remove("selected");
+
+            index++;
+            if (index == imgs.length) index = 0;
+
+            imgs[index].classList.add("selected");
+
+            bigImg.setAttribute("src", imgs[index].getAttribute("src"));
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <h3>???</h3>
+    <div id="thumbs">
+        <img src="./images/1.jpg" class="small">
+        <img src="./images/2.png" class="small">
+        <img src="./images/3.png" class="small">
+    </div>
+    <div><img src="./images/1.jpg" id="big"></div>
+</body>
+
+</html>

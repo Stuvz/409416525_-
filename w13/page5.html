@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-5</title>
+</head>
+
+<body>
+    <ol>
+        <li>珍珠奶茶(NT$30): <input type="number" value="0" id="tea"> 杯</li>
+        <li>拿鐵(NT$45): <input type="number" value="0" id="latte"> 杯</li>
+    </ol>
+    <p>小計 <span id="subtotal">0</span>元</p>
+    <button id="order">訂購</button>
+    <button id="cancel">清除</button>
+    <script type="text/javascript">
+        var subtotal = document.getElementById("subtotal");
+        var tea = document.getElementById("tea");
+        var latte = document.getElementById("latte");
+        var teaCups = 0, latteCups = 0, money = 0;
+
+        document.getElementById("cancel").onclick =
+            function () {
+                tea.value = 0;
+                latte.value = 0;
+                teaCups = 0;
+                latteCups = 0;
+            };
+
+        var btnOrder = document.getElementById("order").onclick =
+            function () {
+                if (money == 0) return;
+                var msg = "";
+                if (teaCups > 0) msg += "珍珠奶茶" + teaCups + "杯\n";
+                if (latteCups > 0) msg += "拿鐵" + latteCups + "杯\n";
+                msg += "總共 " + (teaCups + latteCups) + "杯, " + money + "元";
+                alert(msg);
+
+            };
+        tea.addEventListener('change', calc);
+        latte.addEventListener('change', calc);
+
+        function calc(e){
+            console.log(this);
+            var cups = parseInt(this.value);
+
+            if(this ==tea){
+                if(cups < 0) this.value=teaCups;
+                else teaCups = cups;
+            }
+            else{
+                if(cups < 0) this.value=latteCups;
+                else latteCups = cups;
+            }
+            money = teaCups*30+latteCups*45;
+            subtotal.innerHTML = money;
+        }
+    </script>
+</body>
+
+</html>

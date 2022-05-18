@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-2</title>
+    <script>
+        function addInputField() {
+            var parent = document.getElementById("book").parentNode;
+            for (var i = 0; i < 3; i++) {
+                parent.appendChild(document.createElement("br"));
+                parent.appendChild(document.createTextNode("書名:"));
+                parent.appendChild(document.createElement("input"));
+
+            }
+        }
+        function addBook() {
+            var inputs = document.getElementsByTagName("input");
+            var length = inputs.length;
+
+            var list = document.getElementById("list");
+            var counter = 0;
+
+            for (var i = 0; i < length; i++) {
+                if (inputs[i].value != "") {
+                    var textNode = document.createTextNode(inputs[i].value);
+                    var li = document.createElement("li");
+                    li.appendChild(textNode);
+
+                    list.appendChild(li);
+
+                    counter++;
+                    inputs[i].value = "";
+                }
+            }
+            if (counter == 0) {
+                alert("必須輸入書名!");
+            }
+            else {
+                document.getElementById("bookCount").innerHTML = list.children.length;
+            }
+        }
+    </script>
+</head>
+
+<body onload="addInputField()">
+    <p>
+        書名:<input id="book" type="text">
+        <button onclick="addBook()">新增</button>
+    </p>
+    <p>現在有<span id="bookCount">0</span>本書</p>
+    <ul id="list"></ul>
+</body>
+
+
+
+</html>
